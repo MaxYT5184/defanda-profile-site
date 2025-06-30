@@ -1,0 +1,90 @@
+/* Global reset & font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0f0f0f, #050505);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Profile Card */
+.profile-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00ffee44;
+  padding: 40px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  animation: fadeIn 1.2s ease-out;
+}
+
+.avatar {
+  width: 140px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #00f6ff;
+  animation: popIn 0.8s ease;
+}
+
+.username {
+  font-size: 2rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff77;
+}
+
+.display-name {
+  color: #ffffff99;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.bio {
+  margin-bottom: 30px;
+  color: #bbb;
+}
+
+/* Buttons */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+button,
+.take-break-button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #00f6ff;
+  color: #000;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover,
+.take-break-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00f6ff99;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
